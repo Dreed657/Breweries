@@ -1,0 +1,9 @@
+C:\DEV\Breweries\Breweries.Data\bin\Debug\netstandard2.0\Breweries.Data.deps.json
+C:\DEV\Breweries\Breweries.Data\bin\Debug\netstandard2.0\Breweries.Data.dll
+C:\DEV\Breweries\Breweries.Data\obj\Debug\netstandard2.0\Breweries.Data.csprojAssemblyReference.cache
+C:\DEV\Breweries\Breweries.Data\obj\Debug\netstandard2.0\Breweries.Data.AssemblyInfoInputs.cache
+C:\DEV\Breweries\Breweries.Data\obj\Debug\netstandard2.0\Breweries.Data.AssemblyInfo.cs
+C:\DEV\Breweries\Breweries.Data\bin\Debug\netstandard2.0\Breweries.Data.pdb
+C:\DEV\Breweries\Breweries.Data\obj\Debug\netstandard2.0\Breweries.Data.csproj.CoreCompileInputs.cache
+C:\DEV\Breweries\Breweries.Data\obj\Debug\netstandard2.0\Breweries.Data.dll
+C:\DEV\Breweries\Breweries.Data\obj\Debug\netstandard2.0\Breweries.Data.pdb

@@ -1,0 +1,24 @@
+<p *ngIf="!breweries"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="breweries">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Street</th>
+      <th>City Id</th>
+      <th>State Id</th>
+      <th>Postal Code</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let brewery of breweries">
+      <td>{{ brewery.name }}</td>
+      <td>{{ brewery.street }}</td>
+      <td>{{ brewery.cityId }}</td>
+      <td>{{ brewery.stateId }}</td>
+      <td>{{ brewery.postalCode }}</td>
+      <a class="btn btn-warning" [attr.href]="brewery.url">To Page.</a>
+    </tr>
+  </tbody>
+</table>
