@@ -7,10 +7,12 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./breweries-data.component.css']
 })
 export class BreweriesDataComponent {
-breweries: Brewery[];
+  breweries: Brewery[];
+  page = 1;
+  pageSize = 10;
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<Brewery[]>(baseUrl + 'api/Breweries?count=10').subscribe(result => {
+    http.get<Brewery[]>(baseUrl + 'api/Breweries?count=100').subscribe(result => {
       this.breweries = result;
     }, error => console.error(error));
   }
