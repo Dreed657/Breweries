@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breweries", "Breweries\Breweries.csproj", "{6B34B38C-6C43-46B5-B8AB-0F6101378A0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Breweries.Importer", "Breweries.Importer\Breweries.Importer.csproj", "{1EB5C80C-8BA3-4703-9CAE-77601C385181}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breweries.Importer", "Breweries.Importer\Breweries.Importer.csproj", "{1EB5C80C-8BA3-4703-9CAE-77601C385181}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Breweries.Data", "Breweries.Data\Breweries.Data.csproj", "{638B4EDD-4754-44C3-AB82-9A9E63167E04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breweries.Data", "Breweries.Data\Breweries.Data.csproj", "{638B4EDD-4754-44C3-AB82-9A9E63167E04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breweries.Api", "Breweries.Api\Breweries.Api.csproj", "{D0CEF2D1-A67B-4CAF-8808-B4E44CDAB518}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6B34B38C-6C43-46B5-B8AB-0F6101378A0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B34B38C-6C43-46B5-B8AB-0F6101378A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B34B38C-6C43-46B5-B8AB-0F6101378A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B34B38C-6C43-46B5-B8AB-0F6101378A0E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1EB5C80C-8BA3-4703-9CAE-77601C385181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1EB5C80C-8BA3-4703-9CAE-77601C385181}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EB5C80C-8BA3-4703-9CAE-77601C385181}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +23,10 @@ Global
 		{638B4EDD-4754-44C3-AB82-9A9E63167E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{638B4EDD-4754-44C3-AB82-9A9E63167E04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{638B4EDD-4754-44C3-AB82-9A9E63167E04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0CEF2D1-A67B-4CAF-8808-B4E44CDAB518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0CEF2D1-A67B-4CAF-8808-B4E44CDAB518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0CEF2D1-A67B-4CAF-8808-B4E44CDAB518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0CEF2D1-A67B-4CAF-8808-B4E44CDAB518}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
