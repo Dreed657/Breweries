@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Breweries.Admin.ViewModels.BreweryViewModel>
+@{ 
+    ViewBag.Title = "Brewaries Console";
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Status</th>
+            <th scope="col">City</th>
+            <th scope="col">State</th>
+            <th scope="col">Street</th>
+            <th scope="col">Postal Code</th>
+            <th scope="col"> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var brewery in Model)
+        {
+            <tr>
+                <td>@brewery.Name</td>
+                <td>@brewery.BreweryTypeName</td>
+                <td>@brewery.CityName</td>
+                <td>@brewery.StateName</td>
+                <td>@brewery.Street</td>
+                <td>@brewery.PostalCode</td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        @if (!string.IsNullOrEmpty(brewery.Url))
+                        {
+                            <a class="btn btn-info" href="@brewery.Url">View</a>
+                        }
+                        else
+                        {
+                            <a class="btn btn-info disabled" href="@brewery.Url">View</a>
+                        }
+                        @Html.ActionLink("Edit", "Edit", "Breweries", new { Id = @brewery.Id }, new { @class = "btn btn-warning" })
+                        @Html.ActionLink("Delete", "Delete", "Breweries", new { Id = @brewery.Id }, new { @class = "btn btn-danger" })
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

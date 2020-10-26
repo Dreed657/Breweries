@@ -25,7 +25,10 @@ namespace Breweries.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.;Database=Breweries;Integrated Security=true;");
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Server=.;Database=Breweries;Integrated Security=true;");
+            }
 
             base.OnConfiguring(optionsBuilder);
         }
