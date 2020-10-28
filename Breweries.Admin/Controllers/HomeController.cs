@@ -20,7 +20,7 @@ namespace Breweries.Admin.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return this.Redirect("/Breweries");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -3,7 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Breweries.Admin.Controllers
 {
-    public class BreweriesController : Controller
+    [Route("Breweries")]
+    public class BreweriesController : BaseController
     {
         private readonly IBreweriesService breweryService;
 

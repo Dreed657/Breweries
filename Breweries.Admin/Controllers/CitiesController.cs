@@ -1,13 +1,10 @@
 ﻿using Breweries.Admin.Services.Contracts;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Breweries.Admin.Controllers
 {
-    public class CitiesController : Controller
+    [Route("Cities")]
+    public class CitiesController : BaseController
     {
         private readonly ICitiesService citiesService;
 
@@ -23,13 +20,29 @@ namespace Breweries.Admin.Controllers
             return View(models);
         }
 
+        [HttpGet("Edit")]
         public IActionResult Edit(int id)
         {
+            var model = this.citiesService.GetById(id);
+            return this.View(model);
+        }
+
+        [HttpPost("Edit")]
+        public IActionResult Edit(int id, string name)
+        {
+            if (!this.citiesService.Edit(id, name))
+            {
+                return this.BadRequest("Model didn't update!");
+            }
+
             return this.RedirectToAction(nameof(this.Index));
         }
 
+        [HttpGet("Delete")]
         public IActionResult Delete(int id)
         {
+            this.citiesService.Delete(id);
+
             return this.RedirectToAction(nameof(this.Index));
         }
     }

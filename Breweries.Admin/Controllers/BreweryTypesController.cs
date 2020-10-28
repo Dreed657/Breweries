@@ -1,10 +1,10 @@
 ﻿using Breweries.Admin.Services.Contracts;
 using Microsoft.AspNetCore.Mvc;
-using System.Reflection.Metadata.Ecma335;
 
 namespace Breweries.Admin.Controllers
 {
-    public class BreweryTypesController : Controller
+    [Route("BreweriesTypes")]
+    public class BreweryTypesController : BaseController
     {
         private readonly IBreweryTypeService breweryTypeService;
 
@@ -20,15 +20,15 @@ namespace Breweries.Admin.Controllers
             return this.View(models);
         }
 
-        [HttpGet]
+        [HttpGet("Edit")]
         public IActionResult Edit(int id)
         {
             var model = this.breweryTypeService.GetById(id);
             return this.View(model);
         }
 
-        [HttpPost]
-        public IActionResult Edit(int id, [FromForm]string name)
+        [HttpPost("Edit")]
+        public IActionResult Edit(int id, string name)
         {
             if (!this.breweryTypeService.Edit(id, name))
             {
@@ -38,7 +38,7 @@ namespace Breweries.Admin.Controllers
             return this.RedirectToAction(nameof(this.Index));
         }
 
-        [HttpGet]
+        [HttpGet("Delete")]
         public IActionResult Delete(int id)
         {
             this.breweryTypeService.Delete(id);

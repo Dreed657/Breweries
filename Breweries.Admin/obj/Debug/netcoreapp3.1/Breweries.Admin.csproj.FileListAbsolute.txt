@@ -71,7 +71,6 @@ C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Breweries.Admin.TagHelp
 C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Breweries.Admin.TagHelpers.output.cache
 C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Breweries.Admin.RazorCoreGenerate.cache
 C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
@@ -171,3 +170,5 @@ C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Views\BreweryType
 C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Views\Cities\Index.cshtml.g.cs
 C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Views\States\Index.cshtml.g.cs
 C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Views\BreweryTypes\Edit.cshtml.g.cs
+C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Views\Cities\Edit.cshtml.g.cs
+C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Views\States\Edit.cshtml.g.cs
