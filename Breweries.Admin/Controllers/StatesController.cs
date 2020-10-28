@@ -12,10 +12,20 @@ namespace Breweries.Admin.Controllers
             this.statesService = statesService;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int count = 5)
         {
-            var models = this.statesService.GetAll();
+            var models = this.statesService.GetAll(count);
             return this.View(models);
+        }
+
+        public IActionResult Edit(int id)
+        {
+            return this.RedirectToAction(nameof(this.Index));
+        }
+
+        public IActionResult Delete(int id)
+        {
+            return this.RedirectToAction(nameof(this.Index));
         }
     }
 }

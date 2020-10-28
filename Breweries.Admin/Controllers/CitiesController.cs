@@ -16,10 +16,21 @@ namespace Breweries.Admin.Controllers
             this.citiesService = citiesService;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult Index(int count = 5)
         {
-            var models = this.citiesService.GetAll();
+            var models = this.citiesService.GetAll(count);
             return View(models);
+        }
+
+        public IActionResult Edit(int id)
+        {
+            return this.RedirectToAction(nameof(this.Index));
+        }
+
+        public IActionResult Delete(int id)
+        {
+            return this.RedirectToAction(nameof(this.Index));
         }
     }
 }

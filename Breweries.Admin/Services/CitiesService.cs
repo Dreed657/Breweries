@@ -14,10 +14,11 @@ namespace Breweries.Admin.Services
         {
             this.db = db;
         }
-        public IEnumerable<CitiesViewModel> GetAll()
+        public IEnumerable<CitiesViewModel> GetAll(int count)
         {
             return this.db.Cities
                 .Select(x => new CitiesViewModel(x.Id, x.Name))
+                .Take(count)
                 .ToList();
         }
     }

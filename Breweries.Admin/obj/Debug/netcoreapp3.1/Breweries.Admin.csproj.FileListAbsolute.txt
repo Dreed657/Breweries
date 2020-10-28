@@ -170,3 +170,4 @@ C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Views\Breweries\E
 C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Views\BreweryTypes\Index.cshtml.g.cs
 C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Views\Cities\Index.cshtml.g.cs
 C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Views\States\Index.cshtml.g.cs
+C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Views\BreweryTypes\Edit.cshtml.g.cs
