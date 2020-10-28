@@ -167,3 +167,6 @@ C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Breweries.Admin.csproj.
 C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Breweries.Admin.MvcApplicationPartsAssemblyInfo.cs
 C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Breweries.Admin.MvcApplicationPartsAssemblyInfo.cache
 C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Views\Breweries\Edit.cshtml.g.cs
+C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Views\BreweryTypes\Index.cshtml.g.cs
+C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Views\Cities\Index.cshtml.g.cs
+C:\DEV\Breweries\Breweries.Admin\obj\Debug\netcoreapp3.1\Razor\Views\States\Index.cshtml.g.cs

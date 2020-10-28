@@ -1,11 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Breweries.Admin.Services.Contracts;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Breweries.Admin.Controllers
 {
-    public class StatesController
+    public class StatesController : Controller
     {
+        private readonly IStatesService statesService;
+
+        public StatesController(IStatesService statesService)
+        {
+            this.statesService = statesService;
+        }
+
+        public IActionResult Index()
+        {
+            var models = this.statesService.GetAll();
+            return this.View(models);
+        }
     }
 }

@@ -30,6 +30,9 @@ namespace Breweries.Admin
             services.AddRazorPages();
 
             services.AddTransient<IBreweriesService, BreweriesService>();
+            services.AddTransient<IBreweryTypeService, BreweryTypeService>();
+            services.AddTransient<ICitiesService, CitiesService>();
+            services.AddTransient<IStatesService, StatesService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
