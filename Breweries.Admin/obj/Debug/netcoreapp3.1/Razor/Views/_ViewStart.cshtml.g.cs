@@ -19,15 +19,8 @@ using Breweries.Admin;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 2 "C:\DEV\Breweries\Breweries.Admin\Views\_ViewImports.cshtml"
-using Breweries.Admin.Models;
-
-#line default
-#line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3ae8e4b35285f59e1845c9d0a5ae28b8cc2a16ef", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e0f565b8ffbf0c173295a1eff39b432ad48e96a5", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

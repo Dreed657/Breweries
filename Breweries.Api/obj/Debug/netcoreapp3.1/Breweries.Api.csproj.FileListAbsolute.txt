@@ -71,3 +71,8 @@ C:\DEV\Breweries\Breweries.Api\obj\Debug\netcoreapp3.1\Breweries.Api.MvcApplicat
 C:\DEV\Breweries\Breweries.Api\obj\Debug\netcoreapp3.1\Breweries.Api.dll
 C:\DEV\Breweries\Breweries.Api\obj\Debug\netcoreapp3.1\Breweries.Api.pdb
 C:\DEV\Breweries\Breweries.Api\obj\Debug\netcoreapp3.1\Breweries.Api.genruntimeconfig.cache
+C:\DEV\Breweries\Breweries.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\DEV\Breweries\Breweries.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\DEV\Breweries\Breweries.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\DEV\Breweries\Breweries.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\DEV\Breweries\Breweries.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll

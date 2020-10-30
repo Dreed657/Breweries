@@ -6,8 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 using Breweries.Data;
-using Breweries.Admin.Services;
-using Breweries.Admin.Services.Contracts;
+using Breweries.Services;
+using Breweries.Services.Contracts;
 
 namespace Breweries.Admin
 {

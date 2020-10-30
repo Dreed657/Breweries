@@ -30,12 +30,12 @@ namespace Breweries.Data.Services
                 PostalCode = model.postal_code,
                 Url = model.website_url,
                 Street = model.street,
-                BreweryTypeId = this.GetOrCreateBreweryType(model.brewery_type),
-                StateId = this.GetOrCreateState(model.state),
-                CityId = this.GetOrCreateCity(model.city),
+                BreweryTypeId = await this.GetOrCreateBreweryType(model.brewery_type),
+                StateId = await this.GetOrCreateState(model.state),
+                CityId = await this.GetOrCreateCity(model.city),
             };
 
-            System.Console.WriteLine($"Name: {entity.Name}");
+            Console.WriteLine($"Name: {entity.Name}");
 
             return entity;
         }
@@ -46,13 +46,21 @@ namespace Breweries.Data.Services
 
             foreach (var entity in models)
             {
-                entities.Add(await this.Create(entity));
+                try
+                {
+                    entities.Add(await this.Create(entity));
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
             }
 
             await this.SavaChanges(entities.ToArray());
         }
 
-        private int GetOrCreateCity(string type)
+        private async Task<int> GetOrCreateCity(string type)
         {
             var entity = this.db.Cities.FirstOrDefault(x => x.Name == type);
 
@@ -60,6 +68,7 @@ namespace Breweries.Data.Services
             {
                 var model = new City() { Name = type };
                 this.db.Cities.Add(model);
+                await this.db.SaveChangesAsync();
 
                 return model.Id;
             }
@@ -69,7 +78,7 @@ namespace Breweries.Data.Services
             }
         }
 
-        private int GetOrCreateState(string type)
+        private async Task<int> GetOrCreateState(string type)
         {
             var entity = this.db.States.FirstOrDefault(x => x.Name == type);
 
@@ -77,6 +86,7 @@ namespace Breweries.Data.Services
             {
                 var model = new State() { Name = type };
                 this.db.States.Add(model);
+                await this.db.SaveChangesAsync();
 
                 return model.Id;
             }
@@ -86,7 +96,7 @@ namespace Breweries.Data.Services
             }
         }
 
-        private int GetOrCreateBreweryType(string type)
+        private async Task<int> GetOrCreateBreweryType(string type)
         {
             var entity = this.db.BreweryTypes.FirstOrDefault(x => x.Name == type);
 
@@ -94,6 +104,7 @@ namespace Breweries.Data.Services
             {
                 var model = new BreweryType() { Name = type };
                 this.db.BreweryTypes.Add(model);
+                await this.db.SaveChangesAsync();
 
                 return model.Id;
             }

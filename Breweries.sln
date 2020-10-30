@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Breweries.Data", "Breweries
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Breweries.Api", "Breweries.Api\Breweries.Api.csproj", "{D0CEF2D1-A67B-4CAF-8808-B4E44CDAB518}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breweries.Admin", "Breweries.Admin\Breweries.Admin.csproj", "{6EE1BD9E-C032-4727-AE5A-3E75B7B7BC8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Breweries.Admin", "Breweries.Admin\Breweries.Admin.csproj", "{6EE1BD9E-C032-4727-AE5A-3E75B7B7BC8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breweries.Services", "Breweries.Services\Breweries.Services.csproj", "{5FC5EC86-B602-4752-8ED7-4A90513E1424}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{6EE1BD9E-C032-4727-AE5A-3E75B7B7BC8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EE1BD9E-C032-4727-AE5A-3E75B7B7BC8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EE1BD9E-C032-4727-AE5A-3E75B7B7BC8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FC5EC86-B602-4752-8ED7-4A90513E1424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FC5EC86-B602-4752-8ED7-4A90513E1424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FC5EC86-B602-4752-8ED7-4A90513E1424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FC5EC86-B602-4752-8ED7-4A90513E1424}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

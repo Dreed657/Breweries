@@ -1,5 +1,6 @@
-﻿using Breweries.Admin.Services.Contracts;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+
+using Breweries.Services.Contracts;
 
 namespace Breweries.Admin.Controllers
 {

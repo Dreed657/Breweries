@@ -106,3 +106,8 @@ C:\DEV\Breweries\Breweries.Importer\bin\Debug\netcoreapp3.1\Data\washington\wash
 C:\DEV\Breweries\Breweries.Importer\bin\Debug\netcoreapp3.1\Data\west-virginia\west-virginia.csv
 C:\DEV\Breweries\Breweries.Importer\bin\Debug\netcoreapp3.1\Data\wisconsin\wisconsin.csv
 C:\DEV\Breweries\Breweries.Importer\bin\Debug\netcoreapp3.1\Data\wyoming\wyoming.csv
+C:\DEV\Breweries\Breweries.Importer\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\DEV\Breweries\Breweries.Importer\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\DEV\Breweries\Breweries.Importer\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\DEV\Breweries\Breweries.Importer\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\DEV\Breweries\Breweries.Importer\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll

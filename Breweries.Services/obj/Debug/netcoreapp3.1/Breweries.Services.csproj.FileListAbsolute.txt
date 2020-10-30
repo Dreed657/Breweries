@@ -1,0 +1,12 @@
+C:\DEV\Breweries\Breweries.Services\bin\Debug\netcoreapp3.1\Breweries.Services.deps.json
+C:\DEV\Breweries\Breweries.Services\bin\Debug\netcoreapp3.1\Breweries.Services.dll
+C:\DEV\Breweries\Breweries.Services\bin\Debug\netcoreapp3.1\Breweries.Services.pdb
+C:\DEV\Breweries\Breweries.Services\bin\Debug\netcoreapp3.1\Breweries.Data.dll
+C:\DEV\Breweries\Breweries.Services\bin\Debug\netcoreapp3.1\Breweries.Data.pdb
+C:\DEV\Breweries\Breweries.Services\obj\Debug\netcoreapp3.1\Breweries.Services.csprojAssemblyReference.cache
+C:\DEV\Breweries\Breweries.Services\obj\Debug\netcoreapp3.1\Breweries.Services.AssemblyInfoInputs.cache
+C:\DEV\Breweries\Breweries.Services\obj\Debug\netcoreapp3.1\Breweries.Services.AssemblyInfo.cs
+C:\DEV\Breweries\Breweries.Services\obj\Debug\netcoreapp3.1\Breweries.Services.csproj.CoreCompileInputs.cache
+C:\DEV\Breweries\Breweries.Services\obj\Debug\netcoreapp3.1\Breweries.Services.csproj.CopyComplete
+C:\DEV\Breweries\Breweries.Services\obj\Debug\netcoreapp3.1\Breweries.Services.dll
+C:\DEV\Breweries\Breweries.Services\obj\Debug\netcoreapp3.1\Breweries.Services.pdb
