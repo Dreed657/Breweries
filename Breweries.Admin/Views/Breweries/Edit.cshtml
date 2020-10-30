@@ -1,32 +1,88 @@
-﻿@model Breweries.Services.ViewModels.BreweryViewModel
+﻿@model Breweries.Services.ViewModels.EditBreweryViewModel
 
 @{
     ViewData["Title"] = "Edit";
 }
 
-<h1>View</h1>
-
-<h4>Brewery</h4>
+<h1>Edit Brewery - @Model.Name</h1>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col">
         <form asp-action="View">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PostalCode" class="control-label"></label>
-                <input asp-for="PostalCode" class="form-control" />
-                <span asp-validation-for="PostalCode" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Url" class="control-label"></label>
-                <input asp-for="Url" class="form-control" />
-                <span asp-validation-for="Url" class="text-danger"></span>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Statues" class="control-label">Status</label>
+                        <select id="status" name="status" class="custom-select">
+                            @foreach (var statusCode in Model.Statues)
+                            {
+                                if (Model.Status == statusCode)
+                                {
+                                    <option value="statusCode" selected>@statusCode</option>
+                                }
+                                else
+                                {
+                                    <option value="statusCode">@statusCode</option>
+                                }
+                            }
+                        </select>
+                        <span asp-validation-for="Statues" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Street" class="control-label"></label>
+                        <input asp-for="Street" class="form-control" />
+                        <span asp-validation-for="Street" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col">
+
+                    <div class="form-group">
+                        <label asp-for="PostalCode" class="control-label"></label>
+                        <input asp-for="PostalCode" class="form-control" />
+                        <span asp-validation-for="PostalCode" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Cities" class="control-label"></label>
+                        <select id="city" name="city" class="custom-select">
+                            @foreach (var city in Model.Cities)
+                            {
+                                if (Model.City == city)
+                                {
+                                    <option value="statusCode" selected>@city</option>
+                                }
+                                else
+                                {
+                                    <option value="statusCode">@city</option>
+                                }
+                            }
+                        </select>
+                        <span asp-validation-for="Cities" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="States" class="control-label"></label>
+                        <select id="state" name="state" class="custom-select">
+                            @foreach (var state in Model.States)
+                            {
+                                if (Model.State == state)
+                                {
+                                    <option value="statusCode" selected>@state</option>
+                                }
+                                else
+                                {
+                                    <option value="statusCode">@state</option>
+                                }
+                            }
+                        </select>
+                        <span asp-validation-for="States" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

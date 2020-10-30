@@ -54,11 +54,18 @@ namespace Breweries.Services
                 .FirstOrDefault();
         }
 
-        public IEnumerable<CitiesViewModel> GetAll(int count)
+        public IEnumerable<CitiesViewModel> GetAllByCount(int count)
         {
             return this.db.Cities
                 .Select(x => new CitiesViewModel(x.Id, x.Name))
                 .Take(count)
+                .ToList();
+        }
+
+        public IEnumerable<CitiesViewModel> GetAll()
+        {
+            return this.db.Cities
+                .Select(x => new CitiesViewModel(x.Id, x.Name))
                 .ToList();
         }
     }

@@ -10,6 +10,12 @@ namespace Breweries.Services.Contracts
 
         bool Delete(string Id);
 
-        IEnumerable<BreweryViewModel> GetAll(int count = 5);
+        BreweryViewModel GetById(string Id);
+
+        EditBreweryViewModel GetEditModel(string Id);
+
+        IEnumerable<BreweryViewModel> GetAll();
+
+        IEnumerable<BreweryViewModel> GetAllByCount(int count = 5);
     }
 }

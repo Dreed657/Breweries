@@ -17,7 +17,7 @@ namespace Breweries.Admin.Controllers
         [HttpGet]
         public IActionResult Index(int count = 5)
         {
-            var models = this.citiesService.GetAll(count);
+            var models = this.citiesService.GetAllByCount(count);
             return View(models);
         }
 

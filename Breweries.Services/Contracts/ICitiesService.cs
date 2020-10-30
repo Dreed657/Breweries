@@ -6,7 +6,9 @@ namespace Breweries.Services.Contracts
 {
     public interface ICitiesService
     {
-        IEnumerable<CitiesViewModel> GetAll(int count);
+        IEnumerable<CitiesViewModel> GetAll();
+
+        IEnumerable<CitiesViewModel> GetAllByCount(int count);
 
         CitiesViewModel GetById(int Id);
 

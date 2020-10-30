@@ -17,14 +17,15 @@ namespace Breweries.Admin.Controllers
         [HttpGet]
         public IActionResult Index(int count = 5)
         {
-            var models = this.breweryService.GetAll(count);
+            var models = this.breweryService.GetAllByCount(count);
             return this.View(models);
         }
 
         [HttpGet("Edit")]
         public IActionResult Edit(string Id)
         {
-            return this.View();
+            var model = this.breweryService.GetEditModel(Id);
+            return this.View(model);
         }
 
         [HttpGet("Delete")]

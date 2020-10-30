@@ -8,6 +8,8 @@ namespace Breweries.Services.Contracts
     {
         IEnumerable<BreweyTypeViewModel> GetAll();
 
+        IEnumerable<BreweyTypeViewModel> GetAllByCount(int count);
+
         BreweyTypeViewModel GetById(int Id);
 
         bool Delete(int Id);

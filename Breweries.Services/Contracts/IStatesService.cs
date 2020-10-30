@@ -6,7 +6,9 @@ namespace Breweries.Services.Contracts
 {
     public interface IStatesService
     {
-        IEnumerable<StateViewModel> GetAll(int count);
+        IEnumerable<StateViewModel> GetAll();
+
+        IEnumerable<StateViewModel> GetAllByCount(int count);
 
         StateViewModel GetById(int Id);
 

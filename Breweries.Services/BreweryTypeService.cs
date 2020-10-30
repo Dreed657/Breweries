@@ -53,6 +53,14 @@ namespace Breweries.Services
                 .ToList();
         }
 
+        public IEnumerable<BreweyTypeViewModel> GetAllByCount(int count)
+        {
+            return this.db.BreweryTypes
+                .Select(x => new BreweyTypeViewModel(x.Id, x.Name))
+                .Take(count)
+                .ToList();
+        }
+
         public BreweyTypeViewModel GetById(int Id)
         {
             return this.db.BreweryTypes

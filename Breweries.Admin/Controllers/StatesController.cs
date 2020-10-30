@@ -16,7 +16,7 @@ namespace Breweries.Admin.Controllers
 
         public IActionResult Index(int count = 5)
         {
-            var models = this.statesService.GetAll(count);
+            var models = this.statesService.GetAllByCount(count);
             return this.View(models);
         }
 
