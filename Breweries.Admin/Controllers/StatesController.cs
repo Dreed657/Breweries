@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 using Breweries.Services.Contracts;
+using System.Threading.Tasks;
 
 namespace Breweries.Admin.Controllers
 {
@@ -14,9 +15,9 @@ namespace Breweries.Admin.Controllers
             this.statesService = statesService;
         }
 
-        public IActionResult Index(int count = 5)
+        public async Task<IActionResult> Index()
         {
-            var models = this.statesService.GetAllByCount(count);
+            var models = await this.statesService.GetAllAsync();
             return this.View(models);
         }
 

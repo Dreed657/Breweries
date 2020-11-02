@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-
+using System.Threading.Tasks;
 using Breweries.Services.ViewModels.Brewery;
 
 namespace Breweries.Services.Contracts
@@ -14,7 +14,7 @@ namespace Breweries.Services.Contracts
 
         EditBreweryViewModel GetEditModel(string Id);
 
-        IEnumerable<BreweryViewModel> GetAll();
+        Task<IEnumerable<BreweryViewModel>> GetAllAsync();
 
         IEnumerable<BreweryViewModel> GetAllByCount(int count = 5);
     }

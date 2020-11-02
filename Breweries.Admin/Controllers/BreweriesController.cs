@@ -2,6 +2,7 @@
 
 using Breweries.Services.Contracts;
 using Breweries.Services.ViewModels.Brewery;
+using System.Threading.Tasks;
 
 namespace Breweries.Admin.Controllers
 {
@@ -16,9 +17,9 @@ namespace Breweries.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index(int count = 5)
+        public async Task<IActionResult> Index()
         {
-            var models = this.breweryService.GetAllByCount(count);
+            var models = await this.breweryService.GetAllAsync();
             return this.View(models);
         }
 

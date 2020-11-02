@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Breweries.Data;
 using Breweries.Services.Contracts;
 using Breweries.Services.ViewModels;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Breweries.Services
 {
@@ -62,16 +64,23 @@ namespace Breweries.Services
                 .ToList();
         }
 
-        public IEnumerable<CitiesViewModel> GetAll()
+        public async Task<IEnumerable<CitiesViewModel>> GetAllAsync()
         {
-            return this.db.Cities
+            return await this.db.Cities
                 .Select(x => new CitiesViewModel(x.Id, x.Name))
-                .ToList();
+                .ToListAsync();
         }
 
         public int GetIdByName(string name)
         {
             return this.db.Cities.Where(x => x.Name == name).Select(x => x.Id).FirstOrDefault();
+        }
+
+        public IEnumerable<CitiesViewModel> GetAll()
+        {
+            return this.db.Cities
+                .Select(x => new CitiesViewModel(x.Id, x.Name))
+                .ToList();
         }
     }
 }

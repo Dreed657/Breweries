@@ -6,6 +6,8 @@ using Breweries.Services.Contracts;
 using Breweries.Services.ViewModels.Brewery;
 using System;
 using Breweries.Data.Models;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Breweries.Services
 {
@@ -84,9 +86,9 @@ namespace Breweries.Services
                 }).FirstOrDefault();
         }
 
-        public IEnumerable<BreweryViewModel> GetAll()
+        public async Task<IEnumerable<BreweryViewModel>> GetAllAsync()
         {
-            return this.db.Breweries
+            return await this.db.Breweries
                 .Select(x => new BreweryViewModel()
                 {
                     Id = x.Id,
@@ -98,7 +100,7 @@ namespace Breweries.Services
                     PostalCode = x.PostalCode,
                     Url = x.Url,
                 })
-                .ToList();
+                .ToListAsync();
         }
 
         public IEnumerable<BreweryViewModel> GetAllByCount(int count = 5)

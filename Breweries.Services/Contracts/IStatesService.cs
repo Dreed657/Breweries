@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-
+using System.Threading.Tasks;
 using Breweries.Services.ViewModels;
 
 namespace Breweries.Services.Contracts
@@ -7,6 +7,8 @@ namespace Breweries.Services.Contracts
     public interface IStatesService
     {
         IEnumerable<StateViewModel> GetAll();
+
+        Task<IEnumerable<StateViewModel>> GetAllAsync();
 
         int GetIdByName(string name);
 

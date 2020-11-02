@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Breweries.Data;
 using Breweries.Services.Contracts;
 using Breweries.Services.ViewModels;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Breweries.Services
 {
@@ -51,6 +53,13 @@ namespace Breweries.Services
             return this.db.BreweryTypes
                 .Select(x => new BreweyTypeViewModel(x.Id, x.Name))
                 .ToList();
+        }
+
+        public async Task<IEnumerable<BreweyTypeViewModel>> GetAllAsync()
+        {
+            return await this.db.BreweryTypes
+                .Select(x => new BreweyTypeViewModel(x.Id, x.Name))
+                .ToListAsync();
         }
 
         public IEnumerable<BreweyTypeViewModel> GetAllByCount(int count)
