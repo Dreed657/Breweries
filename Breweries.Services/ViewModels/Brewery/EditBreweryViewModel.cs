@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
-namespace Breweries.Services.ViewModels
+namespace Breweries.Services.ViewModels.Brewery
 {
     public class EditBreweryViewModel
     {
@@ -10,19 +11,26 @@ namespace Breweries.Services.ViewModels
             this.Cities = new HashSet<string>();
             this.States = new HashSet<string>();
         }
-
+        
+        [Required]
         public string Id { get; set; }
 
+        [Required]
         public string Name { get; set; }
 
+        [Required]
         public string Street { get; set; }
 
+        [Required]
         public string PostalCode { get; set; }
 
+        [Required]
         public string City { get; set; }
 
+        [Required]
         public string State { get; set; }
 
+        [Required]
         public string Status { get; set; }
 
         public IEnumerable<string> Statues { get; set; }

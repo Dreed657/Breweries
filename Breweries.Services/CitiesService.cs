@@ -68,5 +68,10 @@ namespace Breweries.Services
                 .Select(x => new CitiesViewModel(x.Id, x.Name))
                 .ToList();
         }
+
+        public int GetIdByName(string name)
+        {
+            return this.db.Cities.Where(x => x.Name == name).Select(x => x.Id).FirstOrDefault();
+        }
     }
 }

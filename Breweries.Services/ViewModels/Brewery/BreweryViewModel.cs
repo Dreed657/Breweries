@@ -1,4 +1,4 @@
-﻿namespace Breweries.Services.ViewModels
+﻿namespace Breweries.Services.ViewModels.Brewery
 {
     public class BreweryViewModel
     {

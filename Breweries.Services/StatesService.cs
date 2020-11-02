@@ -68,5 +68,10 @@ namespace Breweries.Services
                 .Select(x => new StateViewModel(x.Id, x.Name))
                 .ToList();
         }
+
+        public int GetIdByName(string name)
+        {
+            return this.db.States.Where(x => x.Name == name).Select(x => x.Id).FirstOrDefault();
+        }
     }
 }

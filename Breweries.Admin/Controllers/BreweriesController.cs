@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 using Breweries.Services.Contracts;
+using Breweries.Services.ViewModels.Brewery;
 
 namespace Breweries.Admin.Controllers
 {
@@ -26,6 +27,17 @@ namespace Breweries.Admin.Controllers
         {
             var model = this.breweryService.GetEditModel(Id);
             return this.View(model);
+        }
+
+        [HttpPost("Edit")]
+        public IActionResult Edit(InputBreweryEditModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                this.breweryService.Edit(model);
+            }
+
+            return RedirectToAction(nameof(this.Index));
         }
 
         [HttpGet("Delete")]

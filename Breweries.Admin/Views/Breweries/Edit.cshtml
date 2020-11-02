@@ -1,4 +1,4 @@
-﻿@model Breweries.Services.ViewModels.EditBreweryViewModel
+﻿@model Breweries.Services.ViewModels.Brewery.EditBreweryViewModel
 
 @{
     ViewData["Title"] = "Edit";
@@ -8,7 +8,7 @@
 <hr />
 <div class="row">
     <div class="col">
-        <form asp-action="View">
+        <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="row">
@@ -19,17 +19,17 @@
                         <span asp-validation-for="Name" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Statues" class="control-label">Status</label>
+                        <label asp-for="Status" class="control-label">Status</label>
                         <select id="status" name="status" class="custom-select">
                             @foreach (var statusCode in Model.Statues)
                             {
                                 if (Model.Status == statusCode)
                                 {
-                                    <option value="statusCode" selected>@statusCode</option>
+                                    <option value="@statusCode" selected>@statusCode</option>
                                 }
                                 else
                                 {
-                                    <option value="statusCode">@statusCode</option>
+                                    <option value="@statusCode">@statusCode</option>
                                 }
                             }
                         </select>
@@ -42,41 +42,40 @@
                     </div>
                 </div>
                 <div class="col">
-
                     <div class="form-group">
                         <label asp-for="PostalCode" class="control-label"></label>
                         <input asp-for="PostalCode" class="form-control" />
                         <span asp-validation-for="PostalCode" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Cities" class="control-label"></label>
+                        <label asp-for="City" class="control-label">City</label>
                         <select id="city" name="city" class="custom-select">
                             @foreach (var city in Model.Cities)
                             {
                                 if (Model.City == city)
                                 {
-                                    <option value="statusCode" selected>@city</option>
+                                    <option value="@city" selected>@city</option>
                                 }
                                 else
                                 {
-                                    <option value="statusCode">@city</option>
+                                    <option value="@city">@city</option>
                                 }
                             }
                         </select>
                         <span asp-validation-for="Cities" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="States" class="control-label"></label>
+                        <label asp-for="State" class="control-label">State</label>
                         <select id="state" name="state" class="custom-select">
                             @foreach (var state in Model.States)
                             {
                                 if (Model.State == state)
                                 {
-                                    <option value="statusCode" selected>@state</option>
+                                    <option value="@state" selected>@state</option>
                                 }
                                 else
                                 {
-                                    <option value="statusCode">@state</option>
+                                    <option value="@state">@state</option>
                                 }
                             }
                         </select>

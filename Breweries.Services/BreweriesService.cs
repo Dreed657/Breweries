@@ -3,7 +3,8 @@ using System.Collections.Generic;
 
 using Breweries.Data;
 using Breweries.Services.Contracts;
-using Breweries.Services.ViewModels;
+using Breweries.Services.ViewModels.Brewery;
+using System;
 using Breweries.Data.Models;
 
 namespace Breweries.Services
@@ -38,9 +39,28 @@ namespace Breweries.Services
             return true;
         }
 
-        public bool Edit(string Id, BreweryEditModel model)
+        public bool Edit(InputBreweryEditModel model)
         {
-            throw new System.NotImplementedException();
+            // TODO: Add Validation for State City BreweryType ...
+
+            var entity = this.db.Breweries.FirstOrDefault(x => x.Id == model.Id);
+
+            if (entity == null)
+            {
+                return false;
+            }
+
+            entity.Name = model.Name;
+            entity.Street = model.Street;
+            entity.PostalCode = model.PostalCode;
+            entity.StateId = this.statesService.GetIdByName(model.State);
+            entity.CityId = this.citiesService.GetIdByName(model.City);
+            entity.BreweryTypeId = this.breweryTypeService.GetIdByName(model.Status);
+
+            this.db.Breweries.Update(entity);
+            this.db.SaveChanges();
+
+            return true;
         }
 
         public EditBreweryViewModel GetEditModel(string Id)

@@ -8,6 +8,8 @@ namespace Breweries.Services.Contracts
     {
         IEnumerable<CitiesViewModel> GetAll();
 
+        int GetIdByName(string name);
+
         IEnumerable<CitiesViewModel> GetAllByCount(int count);
 
         CitiesViewModel GetById(int Id);

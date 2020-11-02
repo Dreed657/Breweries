@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.Collections.Generic;
 using Breweries.Data.Services;
 using Breweries.Data.Models;
+using System.Threading;
 
 namespace Breweries.Importer
 {
@@ -22,8 +23,12 @@ namespace Breweries.Importer
             var db = new ApplicationDbContext();
             service = new BreweryService(db);
 
-            //db.Database.EnsureDeleted();
-            //db.Database.EnsureCreated();
+            db.Database.EnsureDeleted();
+            db.Database.EnsureCreated();
+
+            Console.WriteLine("Database schema is resetted!");
+            Console.WriteLine("Data entry will begin!");
+            Thread.Sleep(2000);
 
             await ProcessData(@".\Data");
         }

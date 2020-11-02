@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 
-using Breweries.Services.ViewModels;
+using Breweries.Services.ViewModels.Brewery;
 
 namespace Breweries.Services.Contracts
 {
     public interface IBreweriesService
     {
-        bool Edit(string Id, BreweryEditModel model);
+        bool Edit(InputBreweryEditModel model);
 
         bool Delete(string Id);
 

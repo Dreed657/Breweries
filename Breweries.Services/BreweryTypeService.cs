@@ -68,5 +68,10 @@ namespace Breweries.Services
                 .Select(x => new BreweyTypeViewModel(x.Id, x.Name))
                 .FirstOrDefault();
         }
+
+        public int GetIdByName(string name)
+        {
+            return this.db.BreweryTypes.Where(x => x.Name == name).Select(x => x.Id).FirstOrDefault();
+        }
     }
 }
