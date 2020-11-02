@@ -23,12 +23,7 @@ namespace Breweries.Importer
             var db = new ApplicationDbContext();
             service = new BreweryService(db);
 
-            db.Database.EnsureDeleted();
-            db.Database.EnsureCreated();
-
-            Console.WriteLine("Database schema is resetted!");
-            Console.WriteLine("Data entry will begin!");
-            Thread.Sleep(2000);
+            //Reset(db);
 
             await ProcessData(@".\Data");
         }
@@ -77,6 +72,16 @@ namespace Breweries.Importer
             var result = csv.GetRecords<RawBreweryDTO>();
 
             return result.ToList();
+        }
+    
+        private static void Reset(ApplicationDbContext db)
+        {
+            db.Database.EnsureDeleted();
+            db.Database.EnsureCreated();
+
+            Console.WriteLine("Database schema is resetted!");
+            Console.WriteLine("Data entry will begin!");
+            Thread.Sleep(2000);
         }
     }
 }
