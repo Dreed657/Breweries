@@ -23,5 +23,7 @@ namespace Breweries.Services.ViewModels.Brewery
         
         [Required]
         public string State { get; set; }
+
+        public string Url { get; set; }
     }
 }

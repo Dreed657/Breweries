@@ -33,6 +33,8 @@ namespace Breweries.Services.ViewModels.Brewery
         [Required]
         public string Status { get; set; }
 
+        public string Url { get; set; }
+
         public IEnumerable<string> Statues { get; set; }
 
         public IEnumerable<string> Cities { get; set; }

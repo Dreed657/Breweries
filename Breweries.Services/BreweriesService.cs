@@ -56,6 +56,7 @@ namespace Breweries.Services
             entity.StateId = this.statesService.GetIdByName(model.State);
             entity.CityId = this.citiesService.GetIdByName(model.City);
             entity.BreweryTypeId = this.breweryTypeService.GetIdByName(model.Status);
+            entity.Url = model.Url;
 
             this.db.Breweries.Update(entity);
             this.db.SaveChanges();
@@ -76,6 +77,7 @@ namespace Breweries.Services
                     City = x.City.Name,
                     State = x.State.Name,
                     Status = x.BreweryType.Name,
+                    Url = x.Url,
                     Cities = this.citiesService.GetAll().Select(x => x.Name).ToList(),
                     States = this.statesService.GetAll().Select(x => x.Name).ToList(),
                     Statues = this.breweryTypeService.GetAll().Select(x => x.Name).ToList(),
