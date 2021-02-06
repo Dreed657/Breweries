@@ -17,9 +17,9 @@ namespace Breweries.Admin.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string query, string postCode)
         {
-            var models = await this.breweryService.GetAllAsync();
+            var models = await this.breweryService.GetAllAsync(query, postCode);
             return this.View(models);
         }
 

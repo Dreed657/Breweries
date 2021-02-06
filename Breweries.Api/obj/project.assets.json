@@ -1707,6 +1707,19 @@
         "runtime": {
           "bin/placeholder/Breweries.Data.dll": {}
         }
+      },
+      "Breweries.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Breweries.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Breweries.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Breweries.Services.dll": {}
+        }
       }
     }
   },
@@ -6185,11 +6198,17 @@
       "type": "project",
       "path": "../Breweries.Data/Breweries.Data.csproj",
       "msbuildProject": "../Breweries.Data/Breweries.Data.csproj"
+    },
+    "Breweries.Services/1.0.0": {
+      "type": "project",
+      "path": "../Breweries.Services/Breweries.Services.csproj",
+      "msbuildProject": "../Breweries.Services/Breweries.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Breweries.Data >= 1.0.0",
+      "Breweries.Services >= 1.0.0",
       "Swashbuckle >= 5.6.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
@@ -6226,6 +6245,9 @@
           "projectReferences": {
             "C:\\DEV\\Breweries\\Breweries.Data\\Breweries.Data.csproj": {
               "projectPath": "C:\\DEV\\Breweries\\Breweries.Data\\Breweries.Data.csproj"
+            },
+            "C:\\DEV\\Breweries\\Breweries.Services\\Breweries.Services.csproj": {
+              "projectPath": "C:\\DEV\\Breweries\\Breweries.Services\\Breweries.Services.csproj"
             }
           }
         }

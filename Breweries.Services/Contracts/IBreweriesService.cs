@@ -14,7 +14,7 @@ namespace Breweries.Services.Contracts
 
         EditBreweryViewModel GetEditModel(string Id);
 
-        Task<IEnumerable<BreweryViewModel>> GetAllAsync();
+        Task<IEnumerable<BreweryViewModel>> GetAllAsync(string query, string postalCode);
 
         IEnumerable<BreweryViewModel> GetAllByCount(int count = 5);
     }

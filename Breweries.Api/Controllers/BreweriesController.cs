@@ -1,4 +1,4 @@
-﻿using Breweries.Data.Services;
+﻿using Breweries.Services.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Breweries.Controllers
@@ -7,9 +7,9 @@ namespace Breweries.Controllers
     [ApiController]
     public class BreweriesController : ControllerBase
     {
-        private readonly IBreweryService breweryService;
+        private readonly IBreweriesService breweryService;
 
-        public BreweriesController(IBreweryService breweryService)
+        public BreweriesController(IBreweriesService breweryService)
         {
             this.breweryService = breweryService;
         }
@@ -17,7 +17,9 @@ namespace Breweries.Controllers
         [HttpGet]
         public IActionResult GetByCount(int count = 5)
         {
-            return Ok(this.breweryService.GetAllByCount(count));
+            var data = this.breweryService.GetAllByCount(count);
+
+            return Ok(data);
         }
     }
 }

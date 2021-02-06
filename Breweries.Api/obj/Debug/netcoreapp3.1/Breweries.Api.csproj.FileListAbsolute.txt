@@ -76,3 +76,5 @@ C:\DEV\Breweries\Breweries.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryp
 C:\DEV\Breweries\Breweries.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\DEV\Breweries\Breweries.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\DEV\Breweries\Breweries.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\DEV\Breweries\Breweries.Api\bin\Debug\netcoreapp3.1\Breweries.Services.dll
+C:\DEV\Breweries\Breweries.Api\bin\Debug\netcoreapp3.1\Breweries.Services.pdb

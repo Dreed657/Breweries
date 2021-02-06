@@ -1,13 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Breweries.Data;
-using Breweries.Data.Services;
+using Breweries.Services;
+using Breweries.Services.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,19 +18,19 @@ namespace Breweries.Api
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>();
 
             services.AddControllers();
-
-            services.AddTransient<IBreweryService, BreweryService>();
-
             services.AddSwaggerGen();
+
+            services.AddTransient<IBreweriesService, BreweriesService>();
+            services.AddTransient<IBreweryTypeService, BreweryTypeService>();
+            services.AddTransient<ICitiesService, CitiesService>();
+            services.AddTransient<IStatesService, StatesService>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

@@ -8,6 +8,7 @@ using System;
 using Breweries.Data.Models;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
 
 namespace Breweries.Services
 {
@@ -86,9 +87,9 @@ namespace Breweries.Services
                 }).FirstOrDefault();
         }
 
-        public async Task<IEnumerable<BreweryViewModel>> GetAllAsync()
+        public async Task<IEnumerable<BreweryViewModel>> GetAllAsync(string query, string postalCode)
         {
-            return await this.db.Breweries
+            var entities = this.db.Breweries
                 .Select(x => new BreweryViewModel()
                 {
                     Id = x.Id,
@@ -99,8 +100,19 @@ namespace Breweries.Services
                     Street = x.Street,
                     PostalCode = x.PostalCode,
                     Url = x.Url,
-                })
-                .ToListAsync();
+                });
+
+            if (!string.IsNullOrEmpty(query))
+            {
+                entities = entities.Where(x => x.Name.Contains(query));
+            }
+            
+            if (!string.IsNullOrEmpty(postalCode))
+            {
+                entities = entities.Where(x => x.PostalCode.Contains(postalCode));
+            }
+
+            return await entities.ToListAsync();
         }
 
         public IEnumerable<BreweryViewModel> GetAllByCount(int count = 5)
